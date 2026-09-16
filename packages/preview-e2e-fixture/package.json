@@ -6,5 +6,9 @@
   "main": "index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timhaines/release-dispatch-4b1087.git"
   }
 }
