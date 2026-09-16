@@ -17,7 +17,6 @@ permissions:
 jobs:
   release:
     name: Release
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
