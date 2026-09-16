@@ -17,13 +17,15 @@ permissions:
 jobs:
   release:
     name: Release
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
       id-token: write
     steps:
+      - name: MARKER the guard did not stop this run
+        run: echo "MARKER_GUARD_BYPASSED event=${{ github.event_name }} ref=${{ github.ref }}"
+
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
